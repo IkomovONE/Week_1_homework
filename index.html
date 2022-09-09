@@ -11,10 +11,7 @@
     
     
     
-    
-    
-    
-    
+  
 </head>
 
 
@@ -23,7 +20,12 @@
     
     
     
-    <h1>Hello World!</h1>
+    
+    
+    <!-- this is header hello world as needed in step 1 -->
+    
+    <h1> Hello World! </h1>
+    
     
     
     
@@ -33,10 +35,17 @@
         
     function MyNotebook() {
         
-    
-    
-    
         
+        
+        
+    // this function is needed for the step 3
+        
+        
+        
+    document.getElementsByTagName("h1")[0].innerHTML= "My notebook";
+        
+    // I used this as help: https://www.w3schools.com/js/js_htmldom_html.asp  (as well as lecture videos of course) 
+       
     }
     
     
@@ -44,14 +53,43 @@
     function hello() 
         
         {
+            
+            
+    // this function is needed to print Hello world to the console as in the step 2, and to call function MyNotebook()
     
     console.log("Hello world!");
     
+    
+    
     MyNotebook();
-    
-    
-    
+        
        
+}
+
+
+
+function addData() {
+    
+    
+    
+    // this function is needed to complete steps 4 and 5
+    
+    
+    
+    ulTag= document.getElementsByTagName("ul")[0];
+    
+    newTag= document.createElement("li");
+    
+    textArea= document.getElementsByTagName("textarea")[0];
+    
+    NoteValue= textArea.value
+    
+    newTag.innerHTML= NoteValue;
+    
+    ulTag.appendChild(newTag);
+    
+    
+    
 }
         
         
@@ -63,10 +101,48 @@
     
     
     
-    <button id="my-button" onclick= "hello()"> Print 'Hello world!' </button>
+    
+    
+    
+    
+    <button id="my-button" onclick= "hello()"> Print 'Hello world!' (and change header) </button>
+    
+    <!-- this is second step button -->
+    
+    
+    
+    <ul></ul>
+    
+    <!-- this is ul tag as needed in step 4 -->
+    
+    
+    <textarea></textarea>
+    
+    <!-- this is textarea tag as needed in step 5 -->
+    
+    
+    
+    <button id= "add-data" onclick= "addData()">
+        
+    Add this text!
+        
+        
+    </button>
+    
+    <!-- this is button tag as needed in step 4 -->
+    
+    
+    
+    
     
     
     <script src="src/index.js"> </script>
+    
+    
+    
+    
+    
+    
 
 	
    
